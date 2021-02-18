@@ -1,7 +1,7 @@
 
 public class Program {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		// Starting program
 	    System.out.println("Hello world!");
@@ -33,7 +33,16 @@ public class Program {
 	    tr1.start();
 	    tr2.start();
 	    tr3.start();
-	    tr4.start();	    
+	    tr4.start();	
+	    
+	    t1.join();
+	    t2.join();
+	    t3.join();
+	    t4.join();
+	    tr1.join();
+	    tr2.join();
+	    tr3.join();
+	    tr4.join();	    
 	    
 	    System.out.println("threads started, goodbye cruel world");
 	    // Main thread finished
